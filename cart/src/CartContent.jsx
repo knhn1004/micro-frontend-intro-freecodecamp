@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { login, jwt } from './cart';
+import { jwt } from './cart';
+import Login from './Login';
 
 const CartContent = () => {
   const [token, setToken] = useState('');
 
   useEffect(() => {
-    login('sally', '123');
-    return jwt.subscribe(val => setToken(val ?? ''));
-  }, []);
+    return jwt.subscribe(v => setToken(v ?? ''));
+  });
 
-  return <div>jwt: {token}</div>;
+  return (
+    <div>
+      <div>jwt: {token}</div>
+      <Login />
+    </div>
+  );
 };
 
 export default CartContent;

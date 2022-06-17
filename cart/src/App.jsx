@@ -5,6 +5,7 @@ import Header from 'home/Header';
 import Footer from 'home/Footer';
 import CartContent from './CartContent';
 
+import 'remixicon/fonts/remixicon.css';
 import './index.scss';
 
 const App = () => (
