@@ -18,10 +18,11 @@ export default function Login() {
       </span>
       {showLogin && (
         <div
-          className="absolute p-5 border-4 border-blue-800 bg-white rounded-xl text-black"
+          className="absolute p-5 border-4 border-blue-500 bg-white text-black"
           style={{
             width: 300,
-            top: '2rem',
+            top: 50,
+            right: 100,
           }}
         >
           <input
@@ -29,16 +30,16 @@ export default function Login() {
             placeholder="User Name"
             value={username}
             onChange={evt => setUsername(evt.target.value)}
-            className="border text-sm border-gray-400 p-2 rounded-md w-full"
+            className="border text-sm border-gray-400 p-2 w-full"
           />
           <input
             type="password"
             value={password}
             onChange={evt => setPassword(evt.target.value)}
-            className="border text-sm border-gray-400 p-2 rounded-md w-full mt-3"
+            className="border text-sm border-gray-400 p-2 w-full mt-3"
           />
           <button
-            className="bg-green-900 text-white py-2 px-5 rounded-md text-sm mt-5"
+            className="bg-blue-500 text-white py-2 px-5 text-sm mt-5"
             onClick={() => login(username, password)}
             id="loginbtn"
           >
